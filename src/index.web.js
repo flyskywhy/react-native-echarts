@@ -16,7 +16,7 @@ export default class App extends Component {
 
     render() {
           return React.createElement('div', {
-            style: this.props.style,
+            style: [this.props.style,{height: this.props.height}],
             id: this.id
           });
     }
