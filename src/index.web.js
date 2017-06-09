@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-var echarts = require('echarts');
+var echarts = require('echarts/index.js');
 
 export default class App extends Component {
 
