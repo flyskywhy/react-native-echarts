@@ -7,5 +7,6 @@ export default function renderChart(props) {
     document.getElementById('main').style.height = "${height}px";
     var myChart = echarts.init(document.getElementById('main'));
     myChart.setOption(${toString(props.option)});
+    myChart.on('click', function (params) {window.postMessage(params.name)});
   `
 }

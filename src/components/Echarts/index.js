@@ -17,11 +17,16 @@ export default class App extends Component {
     }
   }
 
+  onMessage = event => {
+    this.props.onPressone(event.nativeEvent.data);
+  }
+
   render() {
     return (
       <View style={{flex: 1, height: this.props.height || 400,}}>
         <WebView
           ref="chart"
+          onMessage={this.onMessage}
           scrollEnabled = {false}
           injectedJavaScript = {renderChart(this.props)}
           style={[this.props.style,{
