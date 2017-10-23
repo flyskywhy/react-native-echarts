@@ -18,7 +18,7 @@ export default class App extends Component {
   }
 
   onMessage = event => {
-    this.props.onPressone(event.nativeEvent.data);
+    this.props.onPressone && this.props.onPressone(event.nativeEvent.data);
   }
 
   render() {
